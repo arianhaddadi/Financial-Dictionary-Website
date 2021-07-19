@@ -1,0 +1,283 @@
+@mixin pos($top, $left, $width, $height) {
+    position: absolute;
+    top:$top;
+    left:$left;
+    width: $width;
+    height: $height;
+}
+
+@font-face {
+    font-family: Gandom;
+    src: url("../../../fonts/Gandom.ttf");
+}
+
+.search-section {
+    @media screen and (max-width: 479px) {
+        width: 90vw;
+        border-radius: 25px;
+        padding: 30px 20px;
+    }
+    width: 70vw;
+    margin: 5% auto 0; 
+    display: flex;
+    padding: 30px 40px;
+    border-radius: 30px;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 7px rgb(121, 120, 120);
+    .no-results {
+        direction: rtl;
+        text-align: center;
+        margin-top: 30px;
+    }
+    .search-input-magnifier {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        button {
+            display: none;
+        }
+        @media screen and (max-width: 479px) {
+            flex-direction: column;
+            align-items: center;
+            * {
+                font-size: 15px;
+            }
+            button {
+                display: initial;
+                margin-top: 4vh;
+            }
+        }
+    }
+    .word-edit {
+        display: flex;
+        width: 100%;
+        .edit-button {
+            padding-top: 5%;
+        }
+        .word-description {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            width: 100%;
+            margin-top: 40px;
+            border-bottom: 1px solid black;
+            padding-bottom: 40px;
+            .index-english {
+                display: flex;
+                justify-content: flex-end;
+                width: 80%;
+                .index {
+                    color:white;
+                    background-color: rgb(25, 130, 201);
+                    min-width: 23px;
+                    height: 40px;
+                    font-size: 1.8em;
+                    text-align: center;
+                    margin-left: 20px;
+                }
+                .english {
+                    margin-top: 7.5px;
+                    width: 70%;
+                    text-align: right;
+                    border-bottom: 2px dashed black;
+                }
+            }
+            .meaning-synonym {
+                display: flex;
+                flex-direction: column;
+                direction: rtl;
+                text-align: right;
+                margin-right: 40px;
+                margin-top: 5px;
+                div {
+                    display: flex;
+                    .definition {
+                        color: rgb(7, 85, 158);
+                        font-weight: bolder;
+                    }
+                }
+                .reference {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .edit {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .inputs {
+            margin-top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            .input {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 50%;
+                margin: 0 10px;
+                label {
+                    margin-bottom: 0;
+                }
+                .input-box {
+                    &.en-me {
+                        text-align: left;
+                    }
+                    &.fa-me {
+                        text-align: right;
+                    }
+                    height: 25vh;
+                    font-size: 15px;
+                    border-radius: 20px;
+                }
+            }
+        }
+        .editing-buttons {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            margin-top: 30px;
+            button {
+                margin: 0 10px;
+            }
+        }
+        .notification {
+            direction: rtl;
+            text-align: center;
+            width: 100%;
+            margin-top: 30px;
+            &.success {
+                color: green;
+            }
+            &.error {
+                color: red;
+            }
+        }
+    }
+}
+
+.spinner {
+    margin-top: 30px;
+}
+
+.magnifier {
+    width: 30px;
+    position: absolute;
+    right:5%;
+    top:12px;
+    cursor: pointer;
+    @media screen and (max-width: 479px) {
+        display: none;
+    }
+}
+
+.input-box {
+    cursor: auto;
+    text-align: center;
+    font-size: 23px;
+    border-radius: 50px;
+    height:100%;
+    width: 100%;
+    border: 1px solid black;
+    background-color: white;
+    &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(110, 111, 182, 0.425);
+    }
+}
+
+body, html {
+    font-family: Gandom;
+}
+
+#root {
+    min-height: 100vh;
+    padding-bottom: 20px;
+}
+
+.bg {
+    background-image: url("../../../resources/backgrounds/2.jpg");
+    width: 100%;
+    opacity:1;
+    background-attachment: fixed;
+    filter:brightness(90%);
+    background-size: cover;
+}
+
+
+.Home-me {
+    font-size: 60px;
+    @include pos(5%, 0%, initial, initial);
+    cursor: pointer;
+    &:hover {
+        color:white;
+    }
+}
+
+.container-me {
+    background-color: rgba(18, 19, 19, 0.6);
+    display: flex;
+    font-size: 20px;
+    color:white;
+    padding-bottom: 10px;
+    .container-left-side {
+        display: flex;
+        cursor: pointer;
+        margin:0 auto;
+        .container-left-side-item {
+            margin-left: 25px;
+            margin-top: 17.5px;
+        }
+    }
+    .container-middle {
+        display: flex;
+        .container-middle-item {
+            margin:0 20px;
+            margin-top: 17.5px;
+            cursor: pointer;
+        }
+    }
+    
+    .container-right-side {
+        display: flex;
+        cursor: pointer;
+        margin:0 auto;
+        .container-right-side-item {
+            margin-left: 25px;
+            margin-top: 17.5px;
+        }
+        
+    }
+    @media screen and (max-width: 479px) {
+        font-size: 14px;
+        .container-left-side {
+            .container-left-side-item {
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+        .container-right-side {
+            .container-right-side-item {
+                text-align: center;
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+.about {
+    @include pos(10%, 0, 100%, 90%);
+    background-color: black;
+    opacity: 0.75;
+}
+
+.text {
+    @include pos(15%, 5%, 90%, 80%);
+    text-align: right;
+    color:white;
+}
+

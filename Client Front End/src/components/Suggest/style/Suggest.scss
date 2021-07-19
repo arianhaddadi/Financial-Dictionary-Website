@@ -1,0 +1,24 @@
+.suggest {
+    direction: rtl;
+    .title {
+        text-align: center;
+    }
+    .message {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .inputs {
+        margin-top: 30px;
+    }
+    .notification {
+        margin-top: 15px;
+        text-align: center;
+        direction: rtl;
+        &.success {
+            color:green;
+        }
+        &.error {
+            color: red;
+        }
+    }
+}

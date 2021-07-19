@@ -1,0 +1,52 @@
+
+.login-signup-divs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .login-signup-div {
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 40px;
+        &:nth-child(2) {
+            margin-left: 45px;
+        }
+        width: 100%;
+        label {
+            margin-top: 30px;
+            margin-left: 10px;
+        }   
+        .login-signup-input-box {
+            margin-top: 20px;
+            cursor: auto;
+            text-align: center;
+            height: 100%;
+            width: 25vw;
+            border: 1px solid black;
+            border-radius: 50px;
+            &:focus {
+                box-shadow: 0 0 0 0.2rem rgba(150, 151, 185, 0.425);
+            }
+        }
+    }
+    button {
+        margin-top: 50px;
+        width: 30%;
+        border-radius: 50px;
+    }
+    .notification {
+        margin-top: 20px;
+        direction: rtl;
+        text-align: center;
+        font-size: 1.2em;
+        &.error {
+            color: red;
+        }
+        &.success {
+            color: green;
+        }
+    }
+}

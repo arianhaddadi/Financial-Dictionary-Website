@@ -1,0 +1,80 @@
+.add-word {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .spinner {
+        margin-top: 30px;
+    }
+    .header {
+        font-size: 2.5em;
+        color:rgb(15, 114, 228);
+    }
+    .inputs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .input {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 40%;
+            margin: 40px 10px 0;
+            label {
+                margin-bottom: 0;
+            }
+            .input-box {
+                border-radius: 10px;
+                text-align: left;
+                direction: ltr;
+                &.fa-me {
+                    direction: rtl;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        .edit-button {
+            margin:60px 15px 0;
+            border-radius: 30px;
+            width: 15%;
+        }
+    }
+    .notification {
+        direction: rtl;
+        text-align: center;
+        width: 100%;
+        margin-top: 30px;
+        &.success {
+            color: green;
+        }
+        &.error {
+            color: red;
+        }
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .add-word {
+        .inputs {
+            flex-direction: column;
+            align-items: center;
+            .input {
+                width: 80%;
+                &:nth-child(2) {
+                    margin-top:20px;
+                }
+            }
+        }
+        .buttons {
+            .edit-button {
+                width:30%;
+            }
+        }
+    }
+}

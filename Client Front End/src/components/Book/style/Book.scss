@@ -1,0 +1,37 @@
+.post-content{
+    margin-top: 50px;
+    .english {
+        direction: ltr;
+        text-align: left;
+    }
+    .persian {
+        direction: rtl;
+        text-align: right;
+    }
+}
+
+.title {
+    text-align: right;
+    width: 100%;
+    font-size: 2em;
+    @media screen and (max-width: 479px) {
+        text-align: center;
+    }
+}
+
+.apps-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    .title {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .links {
+        margin-top: 20px;
+        a {
+            margin: 0 15px;
+        }
+    }
+}
